@@ -18,12 +18,12 @@ from app.graph.recommendations import generate_containment_recommendations
 # --------------------------------------------------
 
 app = FastAPI(
-    title="GraphOps API",
+    title="BlastGuard API",
     description=(
         "Graph-based cyber threat hunting "
         "and blast radius analysis platform."
     ),
-    version="0.1.0",
+    version="1.0.0",
 )
 
 
@@ -36,6 +36,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "https://blast-guard.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST"],
